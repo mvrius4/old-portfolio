@@ -1,0 +1,30 @@
+@import "./variables";
+
+.social {
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    margin: 0 1rem;
+    margin-bottom: 3rem;
+    svg {
+        width: 60px;
+        height: 60px;
+        margin: .5rem;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 5;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            font-size: 1rem;
+        }
+        &:hover {
+            .fab:hover {
+                color: $secondaryColor;
+            }
+            .dropdown-content { display: block; }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&display=swap');
+
+@import "./components/variables";
+@import "./components/header";
+@import "./components/social";
+@import "./components/about";
+@import "./components/skills";
+@import "./components/projects";
+@import "./components/footer";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    font-size: 1rem;
+    font-family: $font;
+    color: $primaryColor;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h1 {
+    font-size: clamp(3rem, 6vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+}
+h2 {
+    font-size: clamp(2rem, 3vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+}
+h3 { 
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-weight: 900;
+}
+p {
+    font-size: clamp(1.05rem, 1.35vw, 1.65rem);
+    color: $desColor;
+    font-weight: 700;
+}
+svg {
+    width: 120px;
+    height: 120px;
+    fill: $primaryColor;
+    &:hover, &:focus {
+        fill: $secondaryColor;
+        transition: .5s ease;
+    }
+}
+main {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+    margin: 0 1rem;
+    @media (max-width: 750px) {
+        min-height: 75vh;
+    }
+    .wrapper {
+        min-width: 30%;
+        max-width: 70%;
+        text-align: center;
+        @media (max-width: 750px) {
+            max-width: 100%;
+        }
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+        button {
+            background: $white;
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            color: $primaryColor;
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            transition: .5s ease;
+        }
+        .primary {
+            background: $secondaryColor;
+            &:hover,
+            &:focus {
+                background: $accentColor;
+                color: $primaryColor;
+            }
+        }
+        .secondary:hover,
+        .secondary:focus {
+            color: $secondaryColor;
+        }
+    }
+    .wrapper > * {
+        margin: 1rem;
+    }
+}
+a {
+    text-decoration: none;
+    color: $primaryColor;
+    transition: color .3s ease-in-out;
+    &:hover,
+    &:focus {
+        color: $secondaryColor;
+    }
+}
+span {
+    color: $secondaryColor;
+}
